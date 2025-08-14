@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reunidas</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #004d26;
+    }
+
+    /* Cabeçalho */
+    header {
+        background-color: #004d26; /* verde escuro */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 15px;
+    }
+
+    header img {
+        height: 40px;
+    }
+
+    .contatos-link {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 8px 15px;
+        border: 2px solid #fa0;
+        border-radius: 4px;
+        transition: background 0.3s;
+    }
+
+    .contatos-link:hover {
+        background-color: #fa0;
+        color: white;
+    }
+
+    /* Vídeo */
+    .video-container {
+        position: relative;
+        border-top: 6px solid #05B540;
+        border-bottom: 6px solid #05B540;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .logo-central {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 80%;
+    }
+
+    /* Seção genérica */
+    section {
+        background-color: white;
+        margin: 25px auto;
+        padding: 0;
+        border-radius: 8px;
+        max-width: 1400px;
+        box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+        overflow: hidden;
+    }
+
+    section h2 {
+        background-color: #05b540;
+        color: #fa0;
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    section p {
+        padding: 15px 20px;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    /* Culturas */
+    .culturas p {
+        text-align: center;
+    }
+
+    /* Contatos */
+    .contatos-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 20px;
+        gap: 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .contatos-container div {
+        border-right: 2px solid #fa0;
+        padding: 10px;
+    }
+
+    .contatos-container div:last-child {
+        border-right: none;
+    }
+
+    @media (max-width: 768px) {
+        .contatos-container {
+            grid-template-columns: 1fr;
+            border: none;
+        }
+        .contatos-container div {
+            border-right: none;
+            border-bottom: 1px solid #fa0;
+        }
+        .contatos-container div:last-child {
+            border-bottom: none;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <img src="midias/imagens/Logo Reunidas.png" alt="Logo Reunidas">
+        <a href="#contatos" class="contatos-link">CONTATOS</a>
+    </header>
+
+    <!-- Vídeo -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="midias/video/Reunidas-Pagina-menor.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+        
+    </div>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <h2>Sobre</h2>
+        <p>
+            Com uma história construída ao longo de 50 anos, a Reunidas é uma empresa que nasceu da força do campo e da determinação de seus fundadores. Fundada inicialmente com foco na criação de gado, ao longo das décadas a Reunidas evoluiu, se modernizou e hoje é referência na agricultura, atuando com excelência no cultivo de cana-de-açúcar, milho e soja.
+        </p>
+        <p>
+            Acreditamos que o verdadeiro crescimento nasce da união, por isso carregamos em nosso nome e em nossa essência o compromisso com o coletivo, com o trabalho em equipe e com o fortalecimento das relações. É essa união que impulsiona a prosperidade, tanto da nossa empresa quanto das comunidades e parceiros com os quais atuamos.
+        </p>
+        <p>
+            Aliamos tradição e inovação, investindo constantemente em tecnologia de ponta e em boas práticas agrícolas para garantir produtividade, sustentabilidade e responsabilidade com o meio ambiente. Nossos princípios sólidos são o alicerce que orienta cada decisão, mantendo viva a integridade, a ética e o respeito que sempre nos acompanharam.
+        </p>
+    </section>
+
+<!-- Culturas -->
+<section class="culturas">
+    <h2>Culturas</h2>
+    <div class="carousel">
+        <div class="slide active">
+            <div class="culturas-content">
+                <img src="midias/imagens/soja.jpg" alt="Soja">
+                <div>
+                    <h3 style="color: #fa0; text-align: center;">SOJA</h3>
+                    <p>A soja é uma das culturas mais importantes no cenário agrícola, valorizada pelo seu alto teor de proteína e óleo vegetal. 
+                    É utilizada para produção de farelo, óleo, leite de soja, proteína isolada e diversos outros produtos. 
+                    Além disso, é cultivada com práticas sustentáveis e controle de qualidade rigoroso.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="culturas-content">
+                <img src="midias/imagens/milho.jpg" alt="Milho">
+                <div>
+                    <h3 style="color: #fa0; text-align: center;">MILHO</h3>
+                    <p>O milho é uma das culturas agrícolas mais importantes do mundo, amplamente cultivado por seu alto rendimento e versatilidade.
+                    Originário das Américas, é rico em carboidratos e possui grande valor energético. É utilizado na alimentação humana, animal 
+                    e como matéria-prima para diversos setores, incluindo biocombustíveis, indústria alimentícia e farmacêutica.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="culturas-content">
+                <img src="midias/imagens/cana.jpg" alt="Cana-de-açúcar">
+                <div>
+                    <h3 style="color: #fa0; text-align: center;">CANA-DE-AÇÚCAR</h3>
+                    <p>A cana-de-açúcar é uma das principais culturas do Brasil, utilizada para produção de açúcar, etanol e subprodutos.
+                    Possui grande importância econômica e é cultivada de forma sustentável, garantindo produtividade e preservação ambiental.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<style> 
+   
+
+    .carousel {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        height: 250px;
+    }
+
+    .slide {
+        display: none;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .slide.active {
+        display: block;
+    }
+
+    .culturas-content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .culturas-content img {
+        width: 120px;
+        height: 120px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .dots {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        background-color: gray;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background-color: #05B540;
+    }
+</style>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+            dots[i].classList.toggle("active", i === index);
+        });
+    }
+
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlide(slideIndex);
+    }
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+            slideIndex = i;
+            showSlide(slideIndex);
+        });
+    });
+
+    setInterval(nextSlide, 5000); // muda a cada 5 segundos
+</script>
+
+    <!-- Contatos -->
+    <section id="contatos">
+        <h2>Contatos</h2>
+        <div class="contatos-container">
+            <div>
+                <strong>Telefone</strong><br>
+                (64) 3430 - 6956
+            </div>
+            <div>
+                <strong>Email</strong><br>
+                reunidaspontal@reunidaspontal.com.br
+            </div>
+            <div>
+                <strong>Endereço</strong><br>
+                Rua 07 Qd. 10 Lt. 06, Centro<br>
+                Marciánopolis - Goiatuba - Goiás<br>
+                75602 - 000
+            </div>
+            <div>
+                <strong>Horário de atendimento</strong><br>
+                Seg. - Sex.: 07:00 - 11:00 | 13:00 - 17:48<br>
+                Sábado: 07:00 - 12:00<br>
+                Domingo: Fechado
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
